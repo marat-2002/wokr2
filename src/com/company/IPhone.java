@@ -13,6 +13,6 @@ public class IPhone extends Phone{
     @Override
     public void print() {
         System.out.println("Марка телефона: " + "Iphone" + "\nМодель : " + model + "\nГарантия : " + warranty);
-
+return;
     }
 }

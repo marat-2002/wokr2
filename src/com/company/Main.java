@@ -4,33 +4,31 @@ import java.util.Random;
 
 public class Main {
 
+
     public static void main(String[] args) {
         // write your code here
-        createNewObject(1);//type number from 1 to 3
-        createNewObject(2);//type number from 1 to 3
-        createNewObject(3);//type number from 1 to 3
-        createNewObject(4);//type number from 1 to 3
-
+        Printable[] printables = {createNewObject(0), createNewObject(1), createNewObject(2)};
+        for (int i = 0; i < printables.length; i++) {
+            printables[i].print();
+            
+        }
     }
-    public static Object createNewObject(int Phone ){
+    public static Printable createNewObject(int Phone ) {
         Random random = new Random();
         int b = random.nextInt(30);
         int c = random.nextInt(30);
-        switch (Phone){
-            case 1:
+        switch (Phone) {
+            case 0:
                 Samsung samsung = new Samsung(c, b, 128, "S22 Ultra");
-                samsung.print();
-                break;
-            case 2:
+                return samsung;
+            case 1:
                 IPhone iPhone = new IPhone(c, b, "Айфон 11 ProMax", 5);
-                iPhone.print();
-                break;
-            case 3:
-                Huawei huawei = new Huawei(b, c, 4500, "4G");
-                huawei.print();
-                break;
+               return iPhone;
+            case 2:
+                Huawei huawei = new Huawei(b, c, 4500, "4G и 5G");
+                return huawei;
             default:
-                System.out.println("TYPE NUMBER FROM 1 TO 3!!!");
+                System.out.println("1 TO 3");
         }
         return null;
     }

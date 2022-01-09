@@ -13,6 +13,6 @@ public class Samsung extends Phone {
     @Override
     public void print() {
         System.out.println("Марка телефона: " + "Samsung" + "\nПамять : " + memory + "\nДизайн: " + design);
-
+return;
     }
 }

@@ -13,6 +13,6 @@ public class Huawei extends Phone{
     @Override
     public void print() {
         System.out.println("Марка телефона: " + "Huawei" + "\nМощность батареи : " + batteryCapacity + "\nСеть : " + network);
-
+return;
     }
 }
